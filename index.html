@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="MAIN-WRAPPER">
+        <header class="header">
+            <nav class="header_nav _container">
+                <p class="header_nav_logo">Yaroslav Nazarenko</p>
+                <ul class="header_nav_menu">
+                    <li class="header_nav_menu_link"><a href="">About</a></li>
+                    <li class="header_nav_menu_link"><a href="">Tech Stack</a></li>
+                    <li class="header_nav_menu_link"><a href="">Contacts</a></li>
+                </ul>
+                <button class="header_nav_burger"><span></span></button>
+            </nav>
+        </header>
+        <div class="FIXED-BG">
+            <img src="icons/programming_line_art_concept-01 1.jpg" alt="bg">
+        </div>
+        <!-- !---------- -->
+        <div class="CONTENT">
+            <!-- *                                            -->
+            <div class="home">
+                <div class="home_container _container">
+                    <div class="home_container_imgBlock">
+                        <div class="home_container_imgBlock_img">
+                            <img src="icons/laptop 1.png" alt="">
+                        </div>
+                        <div class="home_container_imgBlock_circle _circle-Xl"></div>
+                        <div class="home_container_imgBlock_circle _circle-m"></div>
+                    </div>
+                    <div class="home_container_textBlock">
+                        <h1 class="home_container_textBlock_title">
+                            Hello,<br>I am Yaroslav Nazarenko
+                        </h1>
+                        <p class="home_container_textBlock_subTitle">
+                            WEB DESIGNER / DEVELOPER
+                        </p>
+                        <a href="asds" class="home_container_textBlock_btn radialTextBtn BUTTON"><span>contact
+                                me</span></a>
+                    </div>
+                </div>
+                <div class="home_circle _circle-Xl"></div>
+                <div class="home_circle _circle-m"></div>
+            </div>
+            <!-- *                                            -->
+            <div class="aboutMe">
+                <div class="aboutMe__container _container">
+                    <div class="aboutMe__container_text">
+                        <h2 class="aboutMe__container_text_title _section_title">About me</h2>
+                        <p class="aboutMe__container_text_description _section_description">My name is Yaroslav
+                            Nazarenko. I am an Ukrainian programmer.
+                            I’ve been studding at Cherkasy state business college for 2 years and now have solid
+                            knowlage of html and css</p>
+                    </div>
+                    <div class="aboutMe__container_imgBlock">
+                        <div class="aboutMe__container_imgBlock_img">
+                            <img src="icons/01 2.jpg" alt="me">
+                        </div>
+                        <div class="aboutMe__container_imgBlock_img_circle _circle-m"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- *                                      -->
+            <div class="techStack">
+                <div class="techStack_container _container">
+                    <h2 class="techStack_container_title _section_title">My Tech Stack</h2>
+                    <p class="techStack_container_description _section_description">Technologies I’ve been working with
+                    </p>
+                    <div class="techStack_container_flexRow">
+                        <div class="techStack_container_flexRow_item">
+                            <img src="icons/css-svgrepo-com.svg" alt="css">
+                        </div>
+                        <div class="techStack_container_flexRow_item">
+                            <img src="icons/github-svgrepo-com.svg" alt="git">
+                        </div>
+                        <div class="techStack_container_flexRow_item">
+                            <img src="icons/html-5-logo-svgrepo-com.svg" alt="html">
+                        </div>
+                        <div class="techStack_container_flexRow_item">
+                            <img src="icons/js-svgrepo-com.svg" alt="js">
+                        </div>
+                        <div class="techStack_container_flexRow_item">
+                            <img src="icons/sass-svgrepo-com.svg" alt="scss">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- *             -->
+            <div class="contacts">
+                <form action="#" method="get">
+                    <h2 class="contacts_title _section_title">Ask me a question</h2>
+                    <input type="text" placeholder="Enter your email" class="contacts_input_email">
+                    <span class="contacts_input_line"></span>
+                    <input type="text" placeholder="Enter your name" class="contacts_input_name">
+                    <span class="contacts_input_line"></span>
+                    <input type="text" placeholder="Type your massage" class="contacts_input_massage">
+                    <span class="contacts_input_line"></span>
+                    <button type="submit" class="contacts_btn BUTTON"><span>SEND</span></button>
+                </form>
+                <footer class="footer _container">
+                    <a href="" class="footer_tel">+380935771234</a>
+                    <div class="footer_icons">
+                        <a href="">
+                            <img src="icons/github-svgrepo-com white.svg" alt="git">
+                        </a>
+                        <a href="">
+                            <img src="icons/linkedin-svgrepo-com.svg" alt="linkedin">
+                        </a>
+                        <a href="">
+                            <img src="icons/twitter-svgrepo-com.svg" alt="twitter">
+                        </a>
+                    </div>
+                    <a href="" class="footer_email">yinazarenkoo@gmail.com</a>
+                </footer>
+            </div>
+        </div>
+        <!-- !---------- -->
+
+    </div>
+    <script>
+        const burger = document.querySelector(".header_nav_burger")
+        const body = document.querySelector("body")
+        const menuLinks = document.querySelectorAll('.header_nav_menu_link')
+
+        menuLinks.forEach(menuLinksElement => {
+            menuLinksElement.addEventListener('click', () => {
+                if (body.classList.contains('active_menu')) {
+                    body.classList.remove('active_menu')
+                }
+            })
+        })
+
+        burger.addEventListener("click", () => {
+            body.classList.toggle('active_menu')
+        })
+    </script>
+</body>
+
+</html>
